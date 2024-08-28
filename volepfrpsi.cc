@@ -138,7 +138,7 @@ void PRFPSISend(const std::shared_ptr<yacl::link::Context>& ctx,
   //std::cout << "文件中有 " << sendershares.size() << " 个元素。" << std::endl;
   std::vector<uint128_t> E(elem_hashes.size());
   std::vector<uint128_t> A(elem_hashes.size());
-  auto ebuf = ctx->Recv(ctx->PrevRank(), "Receive A' = P+A");
+  auto ebuf = ctx->Recv(ctx->PrevRank(), "Receive E");
   YACL_ENFORCE(ebuf.size() == int64_t(elem_hashes.size() * sizeof(uint128_t)));
   std::memcpy(E.data(), ebuf.data(), ebuf.size());
     yacl::parallel_for(0, elem_hashes.size(), [&](int64_t begin, int64_t end) {
