@@ -114,15 +114,15 @@ void RunVolePfrPSI() {
 }
 
 int RunEcdhPsi(){
-  size_t s_n = 1<<20;
-  size_t r_n = 1<<20;
+  size_t s_n = static_cast<uint32_t>((1<<10)*(1.3));
+  size_t r_n = (1<<10)*3;
   auto x = CreateRangeItemsDH(0, s_n);
-  auto y = CreateRangeItemsDH(3, r_n);
+  auto y = CreateRangeItemsDH(0, r_n);
   auto lctxs = yacl::link::test::SetupWorld(2);  // setup network
   auto start_time = std::chrono::high_resolution_clock::now();
   std::future<void> sender = std::async(
       std::launch::async, [&] { EcdhPsiSend(lctxs[0], x,r_n); });
-  std::future<std::vector<size_t>> receiver =
+  std::future<std::vector<uint32_t>> receiver =
       std::async(std::launch::async,
                  [&] { return EcdhPsiRecv(lctxs[1],y,s_n); });
   sender.get();
@@ -154,8 +154,7 @@ int RunEcdhPsi(){
   return 0;
 }
 
-int main(){
-  //RunVolePfrPSI();
+void Testcuckoo(){
    auto n = 1<<20;
    auto inputs = CreateRangeItems(0, n);
    CuckooHash cuckooHash(n);
@@ -173,4 +172,9 @@ int main(){
        }
   }
   
+}
+
+int main(){
+  RunEcdhPsi();
+  return 0;
 }

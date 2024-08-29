@@ -54,10 +54,10 @@ class EcdhPsi {
   std::shared_ptr<yc::EcGroup> ec_;  // ec group
 };
 
-std::vector<size_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
-                 std::vector<std::string>& y,size_t size_x);
+std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
+                 std::vector<std::string>& x,size_t size_y);
 
 
 void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
-                 std::vector<std::string>& x,size_t size_y);
+                 std::vector<std::string>& y,size_t size_x);
 

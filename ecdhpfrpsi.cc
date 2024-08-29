@@ -14,17 +14,19 @@
 
 #include "examples/pfrpsi/ecdhpfrpsi.h"
 
+#include <cstddef>
 #include <cstdint>
 #include <memory>
+#include <random>
 #include <vector>
 
 #include "yacl/crypto/ecc/ec_point.h"
 #include "yacl/crypto/ecc/ecc_spi.h"
 
-inline std::vector<size_t> GetIntersectionIdx(
+inline std::vector<uint32_t> GetIntersectionIdx(
     const std::vector<std::string> &x, const std::vector<std::string> &y) {
   std::set<std::string> set(x.begin(), x.end());
-  std::vector<size_t> ret;
+  std::vector<uint32_t> ret;
   for (size_t i = 0; i < y.size(); ++i) {
     if (set.count(y[i]) != 0) {
       ret.push_back(i);
@@ -33,7 +35,7 @@ inline std::vector<size_t> GetIntersectionIdx(
   return ret;
 }
 
-void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
+std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
                  std::vector<std::string>& x,size_t size_y){
   EcdhPsi alice;
   std::vector<yc::EcPoint> x_points(x.size());
@@ -70,10 +72,19 @@ void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
     ctx->NextRank(),
     yacl::ByteContainerView(maskbuffer.data(), maskbuffer.size() * sizeof(uint8_t)),
     "Send y_mask");
-
+  
+  uint32_t inter_size;  
+  // 接收数据长度的值
+  auto sizebuffer = ctx->Recv(ctx->PrevRank(), "Receive the number of intersection");
+  std::memcpy(&inter_size, sizebuffer.data(), sizeof(uint32_t));
+  size_t total_size_z =  inter_size* sizeof(uint32_t);
+  std::vector<uint32_t> z(inter_size);
+  auto bufz = ctx->Recv(ctx->PrevRank(), "Receive the index of intersection");
+  std::memcpy(bufz.data(), z.data(), total_size_z);
+  return z;
 }
 
-std::vector<size_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
+void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
                  std::vector<std::string>& y,size_t size_x){
   EcdhPsi bob;
   std::vector<yc::EcPoint> y_points(y.size());
@@ -116,7 +127,24 @@ std::vector<size_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
   }
   });  
   auto z = GetIntersectionIdx(x_str, y_str);
-  return z;
+  uint32_t num_intersize = z.size();
+  uint32_t z_size = num_intersize * sizeof(z[0]);
+  // 创建缓冲区
+  std::vector<uint8_t> bufferz(z_size);
+  
+  // 序列化：将 vector 的内容复制到缓冲区
+  std::memcpy(bufferz.data(), z.data(), z_size);
+  // 发送数据
+  ctx->SendAsync(
+    ctx->NextRank(),
+    yacl::ByteContainerView(reinterpret_cast<const uint8_t*>(&num_intersize), sizeof(num_intersize)),
+    "Send the number of intersection");
+
+  ctx->SendAsync(
+    ctx->NextRank(),
+    yacl::ByteContainerView(bufferz.data(), z_size * sizeof(uint8_t)),
+    "Send the index of intersection");
+
 }
 
 void EcdhPsi::MaskStrings(absl::Span<std::string> in,
