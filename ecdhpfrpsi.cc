@@ -19,7 +19,9 @@
 #include <memory>
 #include <random>
 #include <vector>
+#include "examples/pfrpsi/cuckoohash.h"
 
+#include "yacl/base/int128.h"
 #include "yacl/crypto/ecc/ec_point.h"
 #include "yacl/crypto/ecc/ecc_spi.h"
 
@@ -36,14 +38,25 @@ inline std::vector<uint32_t> GetIntersectionIdx(
 }
 
 std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
-                 std::vector<std::string>& x,size_t size_y){
+                 std::vector<uint128_t>& x,size_t size_y){
   EcdhPsi alice;
-  std::vector<yc::EcPoint> x_points(x.size());
-  alice.MaskStrings(absl::MakeSpan(x), absl::MakeSpan(x_points));
+  size_t cuckoosize = static_cast<uint32_t>(size_y*(1.3));
+  std::ifstream file("receivershare");  // 打开文件
+  if (!file.is_open()) {           // 检查文件是否成功打开
+      throw std::runtime_error("cannot open receivershare file");
+  }
+
+  std::vector<int> receivershares;  // 存储整数的向量
+  std::copy_n(std::istream_iterator<int>(file),cuckoosize,std::back_inserter(receivershares));
+  file.close();  // 关闭文件
+
+  size_t size_x = x.size()*3;
+  std::vector<yc::EcPoint> x_points(size_x);
+  alice.MaskUint128s_Recv(absl::MakeSpan(x),absl::MakeSpan(receivershares),absl::MakeSpan(x_points),cuckoosize);
 
    //Send H(id)^a 
   uint64_t max_point_length = alice.ec_->GetSerializeLength(); // 获取点的最大序列化长度
-  uint64_t total_length_x = max_point_length*x.size();
+  uint64_t total_length_x = max_point_length*size_x;
   
   std::vector<uint8_t> xbuffer(total_length_x);
   alice.PointstoBuffer(absl::MakeSpan(x_points), absl::MakeSpan(xbuffer));
@@ -53,16 +66,16 @@ std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ct
     "Send H(id)^a");
 
   //Receive H(id)^b
-  uint64_t total_length_y = max_point_length*size_y; 
+  uint64_t total_length_y = max_point_length*cuckoosize; 
   std::vector<uint8_t> ybuffer(total_length_y);
-  std::vector<yc::EcPoint> y_points(size_y);
+  std::vector<yc::EcPoint> y_points(cuckoosize);
   auto bufypoints = ctx->Recv(ctx->PrevRank(), "Receive H(id)^b");
   YACL_ENFORCE(bufypoints.size() == int64_t(total_length_y * sizeof(uint8_t)));
   std::memcpy(ybuffer.data(), bufypoints.data(), bufypoints.size());  
   alice.BuffertoPoints(absl::MakeSpan(y_points), absl::MakeSpan(ybuffer));
 
 
-  std::vector<yc::EcPoint> y_mask(size_y);
+  std::vector<yc::EcPoint> y_mask(cuckoosize);
   // y_str = y_points ^ {alice_sk}
   alice.MaskEcPoints(absl::MakeSpan(y_points), absl::MakeSpan(y_mask));
   std::vector<uint8_t> maskbuffer(total_length_y);
@@ -85,11 +98,24 @@ std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ct
 }
 
 void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
-                 std::vector<std::string>& y,size_t size_x){
+                 std::vector<uint128_t>& y,size_t size_x,size_t cuckoosize){
   EcdhPsi bob;
-  std::vector<yc::EcPoint> y_points(y.size());
+  std::vector<yc::EcPoint> y_points(cuckoosize);
+  std::ifstream file("sendershare");  // 打开文件
+  if (!file.is_open()) {           // 检查文件是否成功打开
+      throw std::runtime_error("cannot open sendershare file");
+  }
+  size_x = size_x*3;
+  std::vector<int> sendershares;  // 存储整数的向量
+  std::copy_n(std::istream_iterator<int>(file), cuckoosize, std::back_inserter(sendershares));
+  file.close();  // 关闭文件
   // y_points = H(y) ^ {bob_sk}
-  bob.MaskStrings(absl::MakeSpan(y), absl::MakeSpan(y_points));
+  CuckooHash cuckooHash(y.size());
+   // 插入数据到哈希表中
+  cuckooHash.Insert(y);
+   // 打印插入后的哈希表数据
+  cuckooHash.FillRandom();
+  bob.MaskUint128s_Sender(absl::MakeSpan(cuckooHash.bins_), absl::MakeSpan(sendershares),absl::MakeSpan(y_points));
   uint64_t max_point_length = bob.ec_->GetSerializeLength(); // 获取点的最大序列化长度
   
   //Receive H(id)^a 
@@ -102,7 +128,7 @@ void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
   bob.BuffertoPoints(absl::MakeSpan(x_points), absl::MakeSpan(buffer));
     
   //Send H(id)^b
-  uint64_t total_length_y =y.size()  * max_point_length; 
+  uint64_t total_length_y =cuckoosize  * max_point_length; 
   std::vector<uint8_t> ybuffer(total_length_y);
   bob.PointstoBuffer(absl::MakeSpan(y_points), absl::MakeSpan(ybuffer));
   ctx->SendAsync(
@@ -114,13 +140,13 @@ void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
   // x_str = x_points ^ {bob_sk}
   bob.MaskEcPointsD(absl::MakeSpan(x_points), absl::MakeSpan(x_str));
 
-  std::vector<std::string> y_str(y.size());
+  std::vector<std::string> y_str(cuckoosize);
   
   auto bufy_str = ctx->Recv(ctx->PrevRank(), "Receive y_str");
   YACL_ENFORCE(bufy_str.size() == int64_t(total_length_y * sizeof(uint8_t)));
   std::vector<uint8_t> maskbuffer(total_length_y);
   std::memcpy(maskbuffer.data(), bufy_str.data(), bufy_str.size());  
-  yacl::parallel_for(0, y.size(), [&](size_t begin, size_t end) {
+  yacl::parallel_for(0, cuckoosize, [&](size_t begin, size_t end) {
   for (size_t idx = begin; idx < end; ++idx) {
     uint64_t offset = idx*max_point_length;
     y_str[idx] = std::string(reinterpret_cast<const char*>(maskbuffer.data() + offset), max_point_length);
@@ -154,6 +180,41 @@ void EcdhPsi::MaskStrings(absl::Span<std::string> in,
     for (size_t idx = begin; idx < end; ++idx) {
       out[idx] = ec_->HashToCurve(yc::HashToCurveStrategy::Autonomous, in[idx]);
       ec_->MulInplace(&out[idx], sk_);
+    }
+  });
+}
+
+void EcdhPsi::MaskUint128s_Sender(absl::Span<uint128_t> in,
+                          absl::Span<int> shares,
+                          absl::Span<yc::EcPoint> out) {
+  YACL_ENFORCE(in.size() == out.size());
+  yacl::parallel_for(0, in.size(), [&](size_t begin, size_t end) {
+    for (size_t idx = begin; idx < end; ++idx) {
+      std::stringstream ss;
+      ss << in[idx] << shares[idx];
+      std::string ssstring = ss.str();
+      out[idx] = ec_->HashToCurve(yc::HashToCurveStrategy::Autonomous, ssstring);
+      ec_->MulInplace(&out[idx], sk_);
+    }
+  });
+}
+
+void EcdhPsi::MaskUint128s_Recv(absl::Span<uint128_t> in,
+                          absl::Span<int> shares,
+                          absl::Span<yc::EcPoint> out,
+                          size_t cuckoosize) {
+  YACL_ENFORCE(in.size()*3 == out.size());
+  yacl::parallel_for(0, in.size(), [&](size_t begin, size_t end) {
+    for (size_t idx = begin; idx < end; ++idx) {
+      for(int i = 1;i<=3;i++){
+        std::stringstream ss;
+        uint64_t h = GetHash(i,in[idx]) % cuckoosize;
+        ss << in[idx] << shares[h];
+        std::string ssstring = ss.str();
+        int index = idx*3+i-1;
+        out[index] = ec_->HashToCurve(yc::HashToCurveStrategy::Autonomous, ssstring);
+        ec_->MulInplace(&out[index], sk_);
+      }
     }
   });
 }

@@ -41,12 +41,7 @@ std::vector<uint128_t> PRFPSIRecv(
   }
 
   std::vector<int> receivershares;  // 存储整数的向量
-  int share;
-
-  // 读取文件中的每个整数并存储到向量中
-  while (file >> share) {
-      receivershares.push_back(share);
-  }
+  std::copy_n(std::istream_iterator<int>(file), elem_hashes.size(), std::back_inserter(receivershares));
   file.close();  // 关闭文件
   //std::cout << "文件中有 " << receivershares.size() << " 个元素。" << std::endl;
   std::vector<uint128_t> E(elem_hashes.size());
@@ -128,12 +123,7 @@ void PRFPSISend(const std::shared_ptr<yacl::link::Context>& ctx,
   }
 
   std::vector<int> sendershares;  // 存储整数的向量
-  int share;
-
-  // 读取文件中的每个整数并存储到向量中
-  while (file >> share) {
-      sendershares.push_back(share);
-  }
+  std::copy_n(std::istream_iterator<int>(file), elem_hashes.size(), std::back_inserter(sendershares));
   file.close();  // 关闭文件
   //std::cout << "文件中有 " << sendershares.size() << " 个元素。" << std::endl;
   std::vector<uint128_t> E(elem_hashes.size());

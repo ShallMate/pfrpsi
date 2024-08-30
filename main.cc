@@ -31,14 +31,6 @@
 using namespace yacl::crypto;
 using namespace std;
 
-std::vector<std::string> CreateRangeItemsDH(size_t begin, size_t size) {
-  std::vector<std::string> ret;
-  for (size_t i = 0; i < size; i++) {
-    ret.push_back(std::to_string(begin + i));
-  }
-  return ret;
-}
-
 std::vector<uint128_t> CreateRangeItems(size_t begin, size_t size) {
   std::vector<uint128_t> ret;
   for (size_t i = 0; i < size; ++i) {
@@ -114,14 +106,15 @@ void RunVolePfrPSI() {
 }
 
 int RunEcdhPsi(){
-  size_t s_n = static_cast<uint32_t>((1<<10)*(1.3));
-  size_t r_n = (1<<10)*3;
-  auto x = CreateRangeItemsDH(0, s_n);
-  auto y = CreateRangeItemsDH(0, r_n);
+  size_t s_n = 1<<20;
+  size_t cuckoosize = static_cast<uint32_t>(s_n*(1.3)); 
+  size_t r_n = 1<<20;
+  auto x = CreateRangeItems(0, s_n);
+  auto y = CreateRangeItems(0, r_n);
   auto lctxs = yacl::link::test::SetupWorld(2);  // setup network
   auto start_time = std::chrono::high_resolution_clock::now();
   std::future<void> sender = std::async(
-      std::launch::async, [&] { EcdhPsiSend(lctxs[0], x,r_n); });
+      std::launch::async, [&] { EcdhPsiSend(lctxs[0], x,r_n,cuckoosize); });
   std::future<std::vector<uint32_t>> receiver =
       std::async(std::launch::async,
                  [&] { return EcdhPsiRecv(lctxs[1],y,s_n); });
@@ -154,27 +147,9 @@ int RunEcdhPsi(){
   return 0;
 }
 
-void Testcuckoo(){
-   auto n = 1<<20;
-   auto inputs = CreateRangeItems(0, n);
-   CuckooHash cuckooHash(n);
-   // 插入数据到哈希表中
-   cuckooHash.Insert(inputs);
-   // 打印插入后的哈希表数据
-   std::cout << "Cuckoo Hash Table after insertions:" << std::endl;
-   cuckooHash.FillRandom();
-   
-   for (size_t i = 0; i < cuckooHash.bins_.size(); ++i) {
-       if (cuckooHash.hash_index_[i] != 0) {
-           std::cout << "Index " << i << ": " << cuckooHash.bins_[i] << std::endl;
-       } else {
-           std::cout << "Index " << i << ": Empty: "<<cuckooHash.bins_[i]<< std::endl;
-       }
-  }
-  
-}
 
 int main(){
-  RunEcdhPsi();
+  //RunEcdhPsi();
+  RunVolePfrPSI();
   return 0;
 }

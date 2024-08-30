@@ -22,7 +22,7 @@
 #include "yacl/utils/parallel.h"
 
 
-uint64_t GetHash(size_t idx,uint128_t code)  {
+inline uint64_t GetHash(size_t idx,uint128_t code)  {
       uint64_t aligned_u64;
       memcpy(&aligned_u64, reinterpret_cast<const uint8_t*>(&code) + idx * 2,
              sizeof(aligned_u64));
