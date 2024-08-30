@@ -2,7 +2,6 @@ import spu
 import secretflow as sf
 import numpy as np
 import pdb
-import tenseal as ts
 from joblib import Parallel, delayed
 import random
 

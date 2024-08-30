@@ -40,6 +40,7 @@ std::vector<uint128_t> CreateRangeItems(size_t begin, size_t size) {
 }
 
 void RunVolePfrPSI() {
+  std::cout<<"The OPRF-based P^2FRPSI is now being tested."<<std::endl;
   size_t n = 1<<20;
   uint128_t seed;
   yacl::crypto::Prg<uint128_t> prng(yacl::crypto::FastRandU128());
@@ -106,9 +107,10 @@ void RunVolePfrPSI() {
 }
 
 int RunEcdhPsi(){
+   std::cout<<"The DH-based P^2FRPSI is now being tested."<<std::endl;
   size_t s_n = 1<<20;
-  size_t cuckoosize = static_cast<uint32_t>(s_n*(1.3)); 
   size_t r_n = 1<<20;
+  size_t cuckoosize = static_cast<uint32_t>(s_n*(1.3)); 
   auto x = CreateRangeItems(0, s_n);
   auto y = CreateRangeItems(0, r_n);
   auto lctxs = yacl::link::test::SetupWorld(2);  // setup network
@@ -149,7 +151,7 @@ int RunEcdhPsi(){
 
 
 int main(){
-  //RunEcdhPsi();
   RunVolePfrPSI();
+  RunEcdhPsi();
   return 0;
 }
