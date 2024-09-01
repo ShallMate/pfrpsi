@@ -107,13 +107,17 @@ void RunVolePfrPSI() {
 }
 
 int RunEcdhPsi(){
-   std::cout<<"The DH-based P^2FRPSI is now being tested."<<std::endl;
+
+  std::cout<<""<<std::endl;
   size_t s_n = 1<<20;
   size_t r_n = 1<<20;
   size_t cuckoosize = static_cast<uint32_t>(s_n*(1.3)); 
   auto x = CreateRangeItems(0, s_n);
   auto y = CreateRangeItems(0, r_n);
   auto lctxs = yacl::link::test::SetupWorld(2);  // setup network
+
+
+
   auto start_time = std::chrono::high_resolution_clock::now();
   std::future<void> sender = std::async(
       std::launch::async, [&] { EcdhPsiSend(lctxs[0], x,r_n,cuckoosize); });

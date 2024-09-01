@@ -44,7 +44,15 @@ class EcdhPsi {
 
   void MaskEcPoints(absl::Span<yc::EcPoint> in, absl::Span<yc::EcPoint> out);
 
+  void MaskEcPointswithScalar(absl::Span<yc::EcPoint> in,absl::Span<yc::EcPoint> out,yc::MPInt b); 
+
   void MaskEcPointsD(absl::Span<yc::EcPoint> in,absl::Span<std::string> out);
+
+  void StringEcPoints(absl::Span<yc::EcPoint> in,absl::Span<std::string> out); 
+
+  void SubEcPoints(absl::Span<yc::EcPoint> in,absl::Span<yc::EcPoint> out,yc::EcPoint b);
+
+  void AddEcPoints(absl::Span<yc::EcPoint> in,absl::Span<yc::EcPoint> out,yc::EcPoint b);
 
   void PointstoBuffer(absl::Span<yc::EcPoint> in, absl::Span<std::uint8_t> buffer);
 
@@ -59,10 +67,9 @@ class EcdhPsi {
                           absl::Span<yc::EcPoint> out,
                           size_t cuckoosize); 
 
- private:
-  yc::MPInt sk_;                     // secret key
- public:
+
   std::shared_ptr<yc::EcGroup> ec_;  // ec group
+  yc::MPInt sk_; 
 };
 
 std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
