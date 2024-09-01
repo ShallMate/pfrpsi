@@ -109,6 +109,7 @@ void RunVolePfrPSI() {
 int RunEcdhPsi(){
 
   std::cout<<""<<std::endl;
+  std::cout<<"The DH-based P^2FRPSI is now being tested."<<std::endl;
   size_t s_n = 1<<20;
   size_t r_n = 1<<20;
   size_t cuckoosize = static_cast<uint32_t>(s_n*(1.3)); 
