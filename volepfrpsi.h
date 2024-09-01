@@ -28,7 +28,7 @@ using namespace std;
 
 namespace VOLEPFRPSI{
 
-std::vector<uint128_t> PRFPSIRecv(
+std::vector<int32_t> PRFPSIRecv(
   const std::shared_ptr<yacl::link::Context>& ctx,
   std::vector<uint128_t>& elem_hashes, okvs::Baxos baxos,
   std::vector<uint128_t>& A,

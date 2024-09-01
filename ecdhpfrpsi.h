@@ -58,6 +58,8 @@ class EcdhPsi {
 
   void BuffertoPoints(absl::Span<yc::EcPoint> in, absl::Span<std::uint8_t> buffer);
 
+  void BuffertoStrings(absl::Span<std::uint8_t> in, absl::Span<std::string> buffer);
+
   void MaskUint128s_Sender(absl::Span<uint128_t> in,
                           absl::Span<int> shares,
                           absl::Span<yc::EcPoint> out);
@@ -72,7 +74,7 @@ class EcdhPsi {
   yc::MPInt sk_; 
 };
 
-std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
+std::vector<int32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
                  std::vector<uint128_t>& x,size_t size_y);
 
 

@@ -19,6 +19,7 @@
 #include <iostream>
 #include <memory>
 #include <random>
+#include <string>
 #include <vector>
 #include "examples/pfrpsi/cuckoohash.h"
 
@@ -28,19 +29,28 @@
 
 using namespace std;
 
-inline std::vector<uint32_t> GetIntersectionIdx(
+
+
+inline std::vector<int32_t> GetIntersectionIdx(
     const std::vector<std::string> &x, const std::vector<std::string> &y) {
+
   std::set<std::string> set(x.begin(), x.end());
-  std::vector<uint32_t> ret;
-  for (size_t i = 0; i < y.size(); ++i) {
-    if (set.count(y[i]) != 0) {
-      ret.push_back(i);
+  std::vector<int32_t> ret(y.size() / 3, -1);  // 初始化为 -1
+
+  yacl::parallel_for(0, y.size(), [&](size_t start, size_t end) {
+    for (size_t i = start; i < end; ++i) {
+      if (set.count(y[i]) != 0) {
+        ret[i/3] = i/3;
+      }
     }
-  }
+  });
+
+  ret.erase(std::remove(ret.begin(), ret.end(), -1), ret.end());
+  
   return ret;
 }
 
-std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
+std::vector<int32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
                  std::vector<uint128_t>& x,size_t size_y){
   EcdhPsi alice;
   size_t cuckoosize = static_cast<uint32_t>(size_y*(1.3));
@@ -81,21 +91,12 @@ std::vector<uint32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ct
   std::vector<std::string> y_str(cuckoosize);
   // y_str = y_points ^ {alice_sk}
   alice.MaskEcPointsD(absl::MakeSpan(y_points), absl::MakeSpan(y_str));
-
   std::vector<std::string> x_str(size_x);
-
-  
   auto bufx_str = ctx->Recv(ctx->PrevRank(), "Receive x_str");
   YACL_ENFORCE(bufx_str.size() == int64_t(total_length_x * sizeof(uint8_t)));
   std::vector<uint8_t> maskbuffer(total_length_x);
   std::memcpy(maskbuffer.data(), bufx_str.data(), bufx_str.size());
-
-  yacl::parallel_for(0, size_x, [&](size_t begin, size_t end) {
-  for (size_t idx = begin; idx < end; ++idx) {
-    uint64_t offset = idx*max_point_length;
-    x_str[idx] = std::string(reinterpret_cast<const char*>(maskbuffer.data() + offset), max_point_length);
-  }
-  });  
+  alice.BuffertoStrings(absl::MakeSpan(maskbuffer), absl::MakeSpan(x_str));
   auto z = GetIntersectionIdx(y_str, x_str);
  
   return z;
@@ -151,12 +152,12 @@ void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
   std::vector<yc::EcPoint> x_mask(size_x);
   // x_str = x_points ^ {bob_sk}
   bob.MaskEcPoints(absl::MakeSpan(x_points), absl::MakeSpan(x_mask));
-  for (size_t i = 0; i < x_mask.size(); i += 3) {
-      if (i + 2 < x_mask.size()) {
-          // 对每个三元组进行 shuffle
-            std::shuffle(x_mask.begin() + i, x_mask.begin() + i + 3, g);
-        }
+  yacl::parallel_for(0, x_mask.size()/3, [&](size_t begin, size_t end) {
+  for (size_t idx = begin; idx < end; ++idx) {
+    size_t offset = idx*3;
+    std::shuffle(x_mask.begin() + offset, x_mask.begin() + offset + 3, g);
   }
+  });  
   std::vector<uint8_t> maskbuffer(total_length_x);
   bob.PointstoBuffer(absl::MakeSpan(x_mask), absl::MakeSpan(maskbuffer));
 
@@ -289,6 +290,15 @@ void EcdhPsi::BuffertoPoints(absl::Span<yc::EcPoint> in, absl::Span<std::uint8_t
   for (size_t idx = begin; idx < end; ++idx) {
     uint64_t offset = idx*32;
     in[idx] = ec_->DeserializePoint(absl::MakeSpan(buffer.data() + offset, 32)); 
+  }
+  });  
+}
+
+void EcdhPsi::BuffertoStrings(absl::Span<std::uint8_t> in, absl::Span<std::string> buffer){
+  yacl::parallel_for(0, buffer.size(), [&](size_t begin, size_t end) {
+  for (size_t idx = begin; idx < end; ++idx) {
+    uint64_t offset = idx*32;
+    buffer[idx] = std::string(reinterpret_cast<const char*>(in.data() + offset), 32);
   }
   });  
 }

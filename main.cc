@@ -74,7 +74,7 @@ void RunVolePfrPSI() {
   auto start_time = std::chrono::high_resolution_clock::now();
   std::future<void> sender = std::async(
       std::launch::async, [&] { VOLEPFRPSI::PRFPSISend(lctxs[0], items_a, baxos,B,C2); });
-  std::future<std::vector<uint128_t>> receiver =
+  std::future<std::vector<int32_t>> receiver =
       std::async(std::launch::async,
                  [&] { return VOLEPFRPSI::PRFPSIRecv(lctxs[1], items_b, baxos,A,C1); });
   sender.get();
@@ -122,7 +122,7 @@ int RunEcdhPsi(){
   auto start_time = std::chrono::high_resolution_clock::now();
   std::future<void> sender = std::async(
       std::launch::async, [&] { EcdhPsiSend(lctxs[0], x,r_n,cuckoosize); });
-  std::future<std::vector<uint32_t>> receiver =
+  std::future<std::vector<int32_t>> receiver =
       std::async(std::launch::async,
                  [&] { return EcdhPsiRecv(lctxs[1],y,s_n); });
   sender.get();

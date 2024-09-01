@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #include <cstddef>
+#include <cstdint>
 #include <iostream>
 #include <vector>
 #include <future>
@@ -29,7 +30,27 @@ namespace VOLEPFRPSI{
 using namespace yacl::crypto;
 using namespace std;
 
-std::vector<uint128_t> PRFPSIRecv(
+inline std::vector<int32_t> GetIntersectionIdx(
+    const std::vector<uint128_t> &x, const std::vector<uint128_t> &y) {
+
+  std::set<uint128_t> set(x.begin(), x.end());
+  std::vector<int32_t> ret(y.size(), -1);  // 初始化为 -1
+
+  yacl::parallel_for(0, y.size(), [&](size_t start, size_t end) {
+    for (size_t i = start; i < end; ++i) {
+      if (set.count(y[i]) != 0) {
+        ret[i] = i; 
+      }
+    }
+  });
+
+  // 清除所有值为 -1 的元素
+  ret.erase(std::remove(ret.begin(), ret.end(), -1), ret.end());
+  
+  return ret;
+}
+
+std::vector<int32_t> PRFPSIRecv(
   const std::shared_ptr<yacl::link::Context>& ctx,
   std::vector<uint128_t>& elem_hashes, okvs::Baxos baxos,
   std::vector<uint128_t>& A,
@@ -98,18 +119,8 @@ std::vector<uint128_t> PRFPSIRecv(
   auto buf = ctx->Recv(ctx->PrevRank(), "Receive masks of sender");
   YACL_ENFORCE(buf.size() == int64_t(elem_hashes.size() * sizeof(uint128_t)));
   std::memcpy(sendermasks.data(), buf.data(), buf.size());
-  std::vector<uint128_t> intersection_elements;
-  std::mutex intersection_mutex;
-  std::set<uint128_t> seta(receivermasks.begin(), receivermasks.end());
-  yacl::parallel_for(0, sendermasks.size(), [&](int64_t begin, int64_t end) {
-    for (int64_t idx = begin; idx < end; ++idx) {
-        if (seta.count(sendermasks[idx]) != 0) {
-          std::lock_guard<std::mutex> lock(intersection_mutex);
-          intersection_elements.push_back(elem_hashes[idx]);
-      }
-    }
-  });
-  return intersection_elements;
+  auto z = GetIntersectionIdx(sendermasks, receivermasks);
+  return z;
 }
 
 void PRFPSISend(const std::shared_ptr<yacl::link::Context>& ctx,
