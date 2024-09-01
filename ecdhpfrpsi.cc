@@ -53,7 +53,7 @@ inline std::vector<int32_t> GetIntersectionIdx(
 std::vector<int32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
                  std::vector<uint128_t>& x,size_t size_y){
   EcdhPsi alice;
-  size_t cuckoosize = static_cast<uint32_t>(size_y*(1.3));
+  size_t cuckoosize = static_cast<uint32_t>(size_y*(1.27));
   std::ifstream file("receivershare");  // 打开文件
   if (!file.is_open()) {           // 检查文件是否成功打开
       throw std::runtime_error("cannot open receivershare file");

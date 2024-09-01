@@ -32,7 +32,7 @@ inline uint64_t GetHash(size_t idx,uint128_t code)  {
 class CuckooHash {
  public:
   explicit CuckooHash(int cuckoosize)
-      : cuckoosize_(cuckoosize), cuckoolen_(static_cast<uint32_t>(cuckoosize_ * 1.3)) {
+      : cuckoosize_(cuckoosize), cuckoolen_(static_cast<uint32_t>(cuckoosize_ * 1.27)) {
     if (cuckoosize_ <= 0) {
       throw std::invalid_argument("cuckoosize must be positive");
     }

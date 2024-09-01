@@ -23,7 +23,7 @@ spu_device2 = sf.SPU(ss_config)
 sender, receiver = sf.PYU('sender'), sf.PYU('receiver')
 
 
-n = int((1<<20)* 1.3)  
+n = int((1<<20)* 1.27)  
 dnum = 5
 #t = np.random.randint(1, dnum+1)
 t = 1
@@ -145,7 +145,7 @@ sendershare = sf.reveal(spu_sendershare)
 sendershare = sendershare.astype(int)
 
 receivershare = ones_vector - receivershare
-#print(receivershare)
+#print(len(receivershare))
 
 with open('receivershare', 'w') as file:
     for value in receivershare:
