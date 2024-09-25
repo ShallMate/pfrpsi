@@ -23,6 +23,9 @@ cd yacl/examples/
 git clone https://github.com/ShallMate/pfrpsi.git
 cd ..
 bazel build --linkopt=-ldl //...
+cd examples/pfrpsi
+python3 s3r_t.py
+cd ../../
 cd bazel-bin/examples/pfrpsi
 ./pfrpsi
 ```
