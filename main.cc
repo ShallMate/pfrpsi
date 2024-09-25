@@ -85,7 +85,7 @@ void RunVolePfrPSI() {
             << std::endl;
   ;
   std::sort(psi_result.begin(), psi_result.end());
-  std::cout<<"The intersection size is "<<psi_result.size()<<std::endl;
+  //std::cout<<"The intersection size is "<<psi_result.size()<<std::endl;
   auto bytesToMB = [](size_t bytes) -> double {
     return static_cast<double>(bytes) / (1024 * 1024);
   };
@@ -132,7 +132,7 @@ int RunEcdhPsi(){
   std::cout << "Execution time: " << duration.count() << " seconds"
             << std::endl;
   ;
-  std::cout<<"The intersection size is "<<z.size()<<std::endl;
+  //std::cout<<"The intersection size is "<<z.size()<<std::endl;
   auto bytesToMB = [](size_t bytes) -> double {
     return static_cast<double>(bytes) / (1024 * 1024);
   };
