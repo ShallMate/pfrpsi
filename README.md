@@ -14,8 +14,6 @@
 - **[ninja/ninja-build](https://ninja-build.org/)**
 - **Perl 5 with core modules** (Required by [OpenSSL](https://github.com/openssl/openssl/blob/master/INSTALL.md#prerequisites))
 
-## $\mathsf{S^3R}$ Prequisites
-
 You need to install [Secretflow](https://www.secretflow.org.cn/en/docs/secretflow/v1.9.0b2/) to run our $\mathsf{S^3R}$.
 
 ## Build
