@@ -30,6 +30,9 @@ cd bazel-bin/examples/pfrpsi
 ./pfrpsi
 ```
 
+## Result overview
+![Result of our work](./result.png)
+
 ## NOTE
 
 If you encounter any problems when using this repository, you can ask questions about the issues or contact me directly at gw_ling@sjtu.edu.cn. 
