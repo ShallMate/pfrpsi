@@ -1,0 +1,1026 @@
+2024-09-25 21:42:30.884 [info] [thread_pool.cc:ThreadPool:30] Create a fixed thread pool with size 7
+2024-09-25 21:42:30.884 [info] [thread_pool.cc:ThreadPool:30] Create a fixed thread pool with size 7
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution greater completed, input processing took 2.851e-06s, execution took 6.740803365s, output processing took 2.649e-06s, total time 6.740808865s.
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:191] HLO profiling: total time 6.73865967
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - pphlo.greater, executed 1 times, duration 6.73865967s, send bytes 372873480
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:191] HAL profiling: total time 6.737571574
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 6.737571574s, send bytes 372873480
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:191] MPC profiling: total time 6.733020104
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.023345498s, send bytes 0
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 3.9654e-05s, send bytes 0
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 1.3591e-05s, send bytes 0
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 6.695948032s, send bytes 372873480
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.013673329s, send bytes 0
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:204] Link details: total send bytes 372873480, send actions 7
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution greater completed, input processing took 3.009e-06s, execution took 6.741289943s, output processing took 1.603e-06s, total time 6.741294555s.
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:191] HLO profiling: total time 6.739132631
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - pphlo.greater, executed 1 times, duration 6.739132631s, send bytes 372873480
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:191] HAL profiling: total time 6.738070991
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 6.738070991s, send bytes 372873480
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:191] MPC profiling: total time 6.729961427
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.030209752s, send bytes 0
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 0.029593634s, send bytes 0
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 1.6182e-05s, send bytes 0
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 6.604895821s, send bytes 372873480
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.065246038s, send bytes 0
+2024-09-25 21:42:37.622 [info] [api.cc:printProfilingData:204] Link details: total send bytes 372873480, send actions 7
+2024-09-25 21:42:44.073 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution smaller completed, input processing took 4.106e-06s, execution took 6.227861974s, output processing took 2.019e-06s, total time 6.227868099s.
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:191] HLO profiling: total time 6.227083542
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 6.227083542s, send bytes 372873480
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:191] HAL profiling: total time 6.227070091
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 6.227070091s, send bytes 372873480
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:191] MPC profiling: total time 6.216613051
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.017313676s, send bytes 0
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 0.017737304s, send bytes 0
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 1.1784e-05s, send bytes 0
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 6.115652552s, send bytes 372873480
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.065897735s, send bytes 0
+2024-09-25 21:42:44.074 [info] [api.cc:printProfilingData:204] Link details: total send bytes 372873480, send actions 7
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution smaller completed, input processing took 3.315e-06s, execution took 6.271444333s, output processing took 2.193e-06s, total time 6.271449841s.
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:191] HLO profiling: total time 6.270840037
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 6.270840037s, send bytes 372873480
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:191] HAL profiling: total time 6.270827892
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 6.270827892s, send bytes 372873480
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:191] MPC profiling: total time 6.262143848
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.019000419s, send bytes 0
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 4.91e-06s, send bytes 0
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 1.0221e-05s, send bytes 0
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 6.226263842s, send bytes 372873480
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.016864456s, send bytes 0
+2024-09-25 21:42:44.092 [info] [api.cc:printProfilingData:204] Link details: total send bytes 372873480, send actions 7
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution compare completed, input processing took 3.728e-06s, execution took 1.185609559s, output processing took 2.575e-06s, total time 1.185615862s.
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:191] HLO profiling: total time 1.183943311
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 1.133783945s, send bytes 106535280
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 1 times, duration 2.5634e-05s, send bytes 0
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 2 times, duration 8.27e-06s, send bytes 0
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 4 times, duration 0.008104427s, send bytes 0
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - pphlo.shift_left, executed 1 times, duration 0.042021035s, send bytes 0
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:191] HAL profiling: total time 1.1510378209999999
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - _lshift, executed 1 times, duration 0.017273731s, send bytes 0
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 1.13376409s, send bytes 106535280
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:191] MPC profiling: total time 1.128153634
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.016153327s, send bytes 0
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - b2a, executed 2 times, duration 1.094738572s, send bytes 106535280
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - broadcast, executed 1 times, duration 8.864e-06s, send bytes 0
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:194] - lshift_b, executed 1 times, duration 0.017252871s, send bytes 0
+2024-09-25 21:42:45.296 [info] [api.cc:printProfilingData:204] Link details: total send bytes 106535280, send actions 2
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution compare completed, input processing took 4.36e-06s, execution took 1.224161196s, output processing took 1.367e-06s, total time 1.224166923s.
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:191] HLO profiling: total time 1.222569007
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 1.19151894s, send bytes 106535280
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 1 times, duration 2.5651e-05s, send bytes 0
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 2 times, duration 8.506e-06s, send bytes 0
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 4 times, duration 7.382e-06s, send bytes 0
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - pphlo.shift_left, executed 1 times, duration 0.031008528s, send bytes 0
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:191] HAL profiling: total time 1.200684906
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - _lshift, executed 1 times, duration 0.009178283s, send bytes 0
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 1.191506623s, send bytes 106535280
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:191] MPC profiling: total time 1.1944964120000001
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.016716652s, send bytes 0
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - b2a, executed 2 times, duration 1.1686052s, send bytes 106535280
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - broadcast, executed 1 times, duration 8.865e-06s, send bytes 0
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:194] - lshift_b, executed 1 times, duration 0.009165695s, send bytes 0
+2024-09-25 21:42:45.335 [info] [api.cc:printProfilingData:204] Link details: total send bytes 106535280, send actions 2
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 4.538e-06s, execution took 0.388828144s, output processing took 4.007e-06s, total time 0.388836689s.
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.387196961
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.005375298s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.2591e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 1.0743e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 1.9415e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 2.3025e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 15 times, duration 1.4122e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 4.0091e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.381651806s, send bytes 63921168
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.8129e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 2.1741e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.38706220299999994
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.8585e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - f_add, executed 2 times, duration 0.005354719s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 2.593e-06s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 3.7154e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - i_mul, executed 1 times, duration 0.124589712s, send bytes 21307056
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 1.4311e-05s, send bytes 0
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:194] - mixed_mul, executed 2 times, duration 0.257045129s, send bytes 42614112
+2024-09-25 21:42:45.736 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.38700517999999995
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.005331414s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.1919e-05s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 9.535e-06s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 4.725e-06s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 7.362e-06s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 6.228e-06s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 2.619e-06s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.381606837s, send bytes 63921168
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 3.577e-06s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 1.1255e-05s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 9.709e-06s, send bytes 0
+2024-09-25 21:42:45.737 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 7.093e-06s, execution took 0.396725805s, output processing took 1.762e-06s, total time 0.39673466s.
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.39574218200000005
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.00561497s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.2234e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 1.083e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 2.0459e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 2.0379e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 15 times, duration 2.4568e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 0.000211022s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.38978791s, send bytes 63921168
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.0873e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.8937e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.39560825899999996
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.6598e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - f_add, executed 2 times, duration 0.005597386s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 2.538e-06s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 0.0002076s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - i_mul, executed 1 times, duration 0.12695698s, send bytes 21307056
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 1.4448e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - mixed_mul, executed 2 times, duration 0.262812709s, send bytes 42614112
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.395542355
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.005573044s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.0834e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.2388e-05s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 4.761e-06s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 7.661e-06s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 6.724e-06s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 2.105e-06s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.389732271s, send bytes 63921168
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 2.012e-06s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 0.000183905s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 6.65e-06s, send bytes 0
+2024-09-25 21:42:45.738 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 1.85e-06s, execution took 0.398384473s, output processing took 1.475e-06s, total time 0.398387798s.
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.397741858
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.009277122s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.1858e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 6.274e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 1.1725e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.2787e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 15 times, duration 1.5622e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 1.8586e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.388353165s, send bytes 63921168
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 9.176e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.5543e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.397620248
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.3145e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - f_add, executed 2 times, duration 0.009260625s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 1.709e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 1.6812e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - i_mul, executed 1 times, duration 0.125153312s, send bytes 21307056
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 8.47e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - mixed_mul, executed 2 times, duration 0.263166175s, send bytes 42614112
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.397547849
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.00923651s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 7.424e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.1531e-05s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 2.586e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 4.707e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 4.017e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 1.539e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.388268684s, send bytes 63921168
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.54e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 4.023e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 5.288e-06s, send bytes 0
+2024-09-25 21:42:46.137 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 3.033e-06s, execution took 0.415444064s, output processing took 1.4986e-05s, total time 0.415462083s.
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.41373291900000003
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.009797977s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 4.1694e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 1.0612e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 1.9611e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 2.3242e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 15 times, duration 0.008162765s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 3.6754e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.395167146s, send bytes 63921168
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 0.000447996s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 2.5122e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.404979699
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 2.0081e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - f_add, executed 2 times, duration 0.009771848s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 3.863e-06s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 3.3616e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - i_mul, executed 1 times, duration 0.130655267s, send bytes 21307056
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 1.3068e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - mixed_mul, executed 2 times, duration 0.264481956s, send bytes 42614112
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.404907823
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.009730599s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.2878e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 2.1724e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 5.191e-06s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 6.532e-06s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 8.241e-06s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 2.945e-06s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.395087521s, send bytes 63921168
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 2.817e-06s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 6.091e-06s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 2.3284e-05s, send bytes 0
+2024-09-25 21:42:46.156 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 3.15e-06s, execution took 0.415067632s, output processing took 1.843e-06s, total time 0.415072625s.
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.41422166200000005
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.005553576s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.5825e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 1.1293e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 2.34e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.8547e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 15 times, duration 0.003881489s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 3.0091e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.404649398s, send bytes 63921168
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.4818e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.3225e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.410213178
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.1169e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - f_add, executed 2 times, duration 0.005533344s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 1.768e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 2.7249e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - i_mul, executed 1 times, duration 0.136638263s, send bytes 21307056
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 1.7088e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - mixed_mul, executed 2 times, duration 0.267984297s, send bytes 42614112
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.41014950199999994
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.005509048s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 9.473e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.3714e-05s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 4.443e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 8.298e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 5.232e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 2.611e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.404581256s, send bytes 63921168
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.761e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 4.923e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 8.743e-06s, send bytes 0
+2024-09-25 21:42:46.574 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 2.186e-06s, execution took 0.440421121s, output processing took 1.299e-06s, total time 0.440424606s.
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.43973433300000003
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.005659062s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.1583e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 5.82e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 1.1444e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.2546e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 15 times, duration 1.1079e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 1.8894e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.433972452s, send bytes 63921168
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 9.457e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.1996e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.439633158
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.0103e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - f_add, executed 2 times, duration 0.005641986s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 1.636e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 1.7099e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - i_mul, executed 1 times, duration 0.12257249s, send bytes 21307056
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 8.312e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - mixed_mul, executed 2 times, duration 0.311381532s, send bytes 42614112
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.439584504
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.005621246s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 6.465e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.0866e-05s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 3.131e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 4.471e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 3.607e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 1.436e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.43392323s, send bytes 63921168
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.447e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 3.11e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 5.495e-06s, send bytes 0
+2024-09-25 21:42:46.580 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 3.414e-06s, execution took 0.371832915s, output processing took 1.618e-06s, total time 0.371837947s.
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.370843152
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.006238018s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.8712e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 8.661e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 1.484e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.4246e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 15 times, duration 1.7247e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 2.3164e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.364476487s, send bytes 63921168
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 9.731e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.2046e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.370721631
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.0196e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - f_add, executed 2 times, duration 0.006219346s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 1.642e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 2.0621e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - i_mul, executed 1 times, duration 0.130050885s, send bytes 21307056
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 1.0624e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - mixed_mul, executed 2 times, duration 0.234408317s, send bytes 42614112
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.37066818399999996
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.006195114s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 6.993e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.0943e-05s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 3.098e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 5.222e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 4.702e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 1.454e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.364429132s, send bytes 63921168
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.6e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 3.889e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 6.037e-06s, send bytes 0
+2024-09-25 21:42:46.955 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 5.195e-06s, execution took 0.378682566s, output processing took 1.162e-06s, total time 0.378688923s.
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.377285994
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.004883922s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 3.7652e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 2.7447e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 3.2943e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 3.605e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 15 times, duration 0.004827602s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 4.7592e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.367352398s, send bytes 63921168
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.2847e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 2.7541e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.372288793
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 2.2515e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - f_add, executed 2 times, duration 0.004864812s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 3.279e-06s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 4.3359e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - i_mul, executed 1 times, duration 0.12405019s, send bytes 21307056
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 2.2746e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - mixed_mul, executed 2 times, duration 0.243281892s, send bytes 42614112
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.37222358299999997
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.004841918s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.2659e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 2.003e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 1.0032e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 1.0535e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 1.0391e-05s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 5.418e-06s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.36729275s, send bytes 63921168
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 4.663e-06s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 7.799e-06s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 7.388e-06s, send bytes 0
+2024-09-25 21:42:46.956 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:47.347 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 2.88e-06s, execution took 0.389932755s, output processing took 1.189e-06s, total time 0.389936824s.
+2024-09-25 21:42:47.347 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.388832059
+2024-09-25 21:42:47.347 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.004449508s, send bytes 0
+2024-09-25 21:42:47.347 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.4317e-05s, send bytes 0
+2024-09-25 21:42:47.347 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 9.302e-06s, send bytes 0
+2024-09-25 21:42:47.347 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.7272e-05s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 1.2421e-05s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 3.1754e-05s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.384259035s, send bytes 63921168
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 7.74e-06s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 2.071e-05s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.388719255
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.8293e-05s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.004434277s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 2.7902e-05s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.384238783s, send bytes 63921168
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.38866494900000004
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.00440848s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.1512e-05s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.3256e-05s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 4.085e-06s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 6.3e-06s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 2.137e-06s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.384206718s, send bytes 63921168
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 2.633e-06s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 5.397e-06s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 4.431e-06s, send bytes 0
+2024-09-25 21:42:47.348 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 3.258e-06s, execution took 0.391642943s, output processing took 3.225e-06s, total time 0.391649426s.
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.39051588899999995
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.005694243s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.341e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 9.176e-06s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.8995e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 0.00357271s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 3.4496e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.381112721s, send bytes 63921168
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 2.7952e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 2.2186e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.386815493
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.9774e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.005673733s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 2.991e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.381092076s, send bytes 63921168
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.38677143099999994
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.005643005s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.2262e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.2882e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 5.379e-06s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 7.938e-06s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 3.03e-06s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.381062136s, send bytes 63921168
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 2.888e-06s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 5.095e-06s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 1.6816e-05s, send bytes 0
+2024-09-25 21:42:47.350 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:42:47.352 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 1.322e-06s, execution took 0.003108439s, output processing took 5.47e-07s, total time 0.003110308s.
+2024-09-25 21:42:47.352 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.002693848
+2024-09-25 21:42:47.352 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.002693848s, send bytes 0
+2024-09-25 21:42:47.352 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.002689492
+2024-09-25 21:42:47.352 [info] [api.cc:printProfilingData:194] - f_add, executed 1 times, duration 0.002689492s, send bytes 0
+2024-09-25 21:42:47.352 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.002682943
+2024-09-25 21:42:47.352 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.002682943s, send bytes 0
+2024-09-25 21:42:47.352 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:42:47.355 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.002e-06s, execution took 0.002902048s, output processing took 6.64e-07s, total time 0.002904714s.
+2024-09-25 21:42:47.355 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.002532393
+2024-09-25 21:42:47.355 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.002532393s, send bytes 0
+2024-09-25 21:42:47.355 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.002528063
+2024-09-25 21:42:47.355 [info] [api.cc:printProfilingData:194] - f_add, executed 1 times, duration 0.002528063s, send bytes 0
+2024-09-25 21:42:47.355 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.002521444
+2024-09-25 21:42:47.355 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.002521444s, send bytes 0
+2024-09-25 21:42:47.355 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.28e-06s, execution took 0.00465552s, output processing took 1.343e-06s, total time 0.004659143s.
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.004237731
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.004237731s, send bytes 0
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.004231306
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:194] - f_add, executed 1 times, duration 0.004231306s, send bytes 0
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.004221612
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004221612s, send bytes 0
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.868e-06s, execution took 0.005162167s, output processing took 8.28e-07s, total time 0.005165863s.
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.004727493
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.004727493s, send bytes 0
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.004721263
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:194] - f_add, executed 1 times, duration 0.004721263s, send bytes 0
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.004711847
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004711847s, send bytes 0
+2024-09-25 21:42:47.370 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.362e-06s, execution took 0.004758178s, output processing took 1.076e-06s, total time 0.004761616s.
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.004221887
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.288e-06s, execution took 0.004705518s, output processing took 1.037e-06s, total time 0.004708843s.
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.004221887s, send bytes 0
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.004260755
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.00421523
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:194] - f_add, executed 1 times, duration 0.00421523s, send bytes 0
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.004204917
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.004260755s, send bytes 0
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004204917s, send bytes 0
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.00425601
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:194] - f_add, executed 1 times, duration 0.00425601s, send bytes 0
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.004246264
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004246264s, send bytes 0
+2024-09-25 21:42:47.384 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.929e-06s, execution took 0.009337206s, output processing took 1.952e-06s, total time 0.009342087s.
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.008599534999999998
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.209e-06s, execution took 0.009349984s, output processing took 1.501e-06s, total time 0.009353694s.
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.005819588s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 0.002777754s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 1 times, duration 2.193e-06s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.008695776
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.008580514000000001
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.003284001s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - f_add, executed 1 times, duration 0.005812188s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 0.002768326s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 0.005409947s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.008560313
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 1 times, duration 1.828e-06s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.005800407s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 0.002759906s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.008681267
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - f_add, executed 1 times, duration 0.003279307s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 0.00540196s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.008666169000000001
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.00327077s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 0.005395399s, send bytes 0
+2024-09-25 21:42:47.407 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution judge completed, input processing took 2.589e-06s, execution took 1.08413501s, output processing took 1.816e-06s, total time 1.084139415s.
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:191] HLO profiling: total time 1.083502406
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 0.002946913s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 2 times, duration 0.00542237s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 1.071652776s, send bytes 74574696
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - pphlo.not, executed 1 times, duration 0.003480347s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:191] HAL profiling: total time 1.0780439160000002
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - f_less, executed 1 times, duration 1.071641759s, send bytes 74574696
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 0.002926696s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - logical_not, executed 1 times, duration 0.003475461s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:191] MPC profiling: total time 1.077946065
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.002680136s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 0.002451768s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 0.002909577s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 1.8863e-05s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 1.055081733s, send bytes 74574696
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.011348553s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - xor_bp, executed 1 times, duration 0.003455435s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:204] Link details: total send bytes 74574696, send actions 7
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution judge completed, input processing took 3.382e-06s, execution took 1.084665945s, output processing took 7.44e-07s, total time 1.084670071s.
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:191] HLO profiling: total time 1.084123369
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 0.004080776s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 2 times, duration 1.454e-06s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 1.080019698s, send bytes 74574696
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - pphlo.not, executed 1 times, duration 2.1441e-05s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:191] HAL profiling: total time 1.0841013549999998
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - f_less, executed 1 times, duration 1.080010859s, send bytes 74574696
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - int2fxp, executed 1 times, duration 0.004071513s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - logical_not, executed 1 times, duration 1.8983e-05s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:191] MPC profiling: total time 1.0840260720000001
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004817908s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 5.873e-06s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - lshift_a, executed 1 times, duration 0.004060478s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 1.6942e-05s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 1.071910488s, send bytes 74574696
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.003209784s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:194] - xor_bp, executed 1 times, duration 4.599e-06s, send bytes 0
+2024-09-25 21:42:48.554 [info] [api.cc:printProfilingData:204] Link details: total send bytes 74574696, send actions 7
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution sub completed, input processing took 2.207e-06s, execution took 0.081032104s, output processing took 5.119e-06s, total time 0.08103943s.
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.08041556600000001
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 6.093e-06s, send bytes 0
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 1 times, duration 1.356e-06s, send bytes 0
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - pphlo.subtract, executed 1 times, duration 0.080408117s, send bytes 10653528
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.080395448
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - i_sub, executed 1 times, duration 0.080395448s, send bytes 10653528
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.080332966
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004255692s, send bytes 0
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 8.129e-06s, send bytes 0
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - b2a, executed 1 times, duration 0.072842607s, send bytes 10653528
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 7.9e-06s, send bytes 0
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.003218638s, send bytes 0
+2024-09-25 21:42:48.652 [info] [api.cc:printProfilingData:204] Link details: total send bytes 10653528, send actions 1
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution sub completed, input processing took 3.093e-06s, execution took 0.085715129s, output processing took 1.311e-06s, total time 0.085719533s.
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.08525996100000001
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 5.007e-06s, send bytes 0
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 1 times, duration 1.23e-06s, send bytes 0
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - pphlo.subtract, executed 1 times, duration 0.085253724s, send bytes 10653528
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.085247205
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - i_sub, executed 1 times, duration 0.085247205s, send bytes 10653528
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.082496265
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.002642407s, send bytes 0
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 0.002679136s, send bytes 0
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - b2a, executed 1 times, duration 0.067427217s, send bytes 10653528
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 7.7e-06s, send bytes 0
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.009739805s, send bytes 0
+2024-09-25 21:42:48.656 [info] [api.cc:printProfilingData:204] Link details: total send bytes 10653528, send actions 1
+2024-09-25 21:45:30.344 [info] [thread_pool.cc:ThreadPool:30] Create a fixed thread pool with size 7
+2024-09-25 21:45:30.344 [info] [thread_pool.cc:ThreadPool:30] Create a fixed thread pool with size 7
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution greater completed, input processing took 1.854e-06s, execution took 5.753783744s, output processing took 1.831e-06s, total time 5.753787429s.
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:191] HLO profiling: total time 5.753161859
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:194] - pphlo.greater, executed 1 times, duration 5.753161859s, send bytes 372873480
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:191] HAL profiling: total time 5.753151796
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 5.753151796s, send bytes 372873480
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:191] MPC profiling: total time 5.749514997
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.017216719s, send bytes 0
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 3.274e-06s, send bytes 0
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 1.0212e-05s, send bytes 0
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 5.713171734s, send bytes 372873480
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.019113058s, send bytes 0
+2024-09-25 21:45:36.097 [info] [api.cc:printProfilingData:204] Link details: total send bytes 372873480, send actions 7
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution greater completed, input processing took 2.095e-06s, execution took 5.765950828s, output processing took 1.13e-06s, total time 5.765954053s.
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:191] HLO profiling: total time 5.765350041
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:194] - pphlo.greater, executed 1 times, duration 5.765350041s, send bytes 372873480
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:191] HAL profiling: total time 5.765336798
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 5.765336798s, send bytes 372873480
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:191] MPC profiling: total time 5.760675816
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.013602155s, send bytes 0
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 0.013578339s, send bytes 0
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 1.3023e-05s, send bytes 0
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 5.684981619s, send bytes 372873480
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.04850068s, send bytes 0
+2024-09-25 21:45:36.109 [info] [api.cc:printProfilingData:204] Link details: total send bytes 372873480, send actions 7
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution smaller completed, input processing took 3.836e-06s, execution took 6.613371588s, output processing took 2.038e-06s, total time 6.613377462s.
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:191] HLO profiling: total time 6.612682217
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 6.612682217s, send bytes 372873480
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:191] HAL profiling: total time 6.612671527
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 6.612671527s, send bytes 372873480
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:191] MPC profiling: total time 6.604675505
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.017301492s, send bytes 0
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 0.012540486s, send bytes 0
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 1.2641e-05s, send bytes 0
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 6.530919263s, send bytes 372873480
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.043901623s, send bytes 0
+2024-09-25 21:45:42.896 [info] [api.cc:printProfilingData:204] Link details: total send bytes 372873480, send actions 7
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution smaller completed, input processing took 2.222e-06s, execution took 6.668110702s, output processing took 1.544e-06s, total time 6.668114468s.
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:191] HLO profiling: total time 6.667625599
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 6.667625599s, send bytes 372873480
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:191] HAL profiling: total time 6.667614212
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 6.667614212s, send bytes 372873480
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:191] MPC profiling: total time 6.6644125679999995
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.012474074s, send bytes 0
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 2.679e-06s, send bytes 0
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 8.452e-06s, send bytes 0
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 6.643848059s, send bytes 372873480
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.008079304s, send bytes 0
+2024-09-25 21:45:42.900 [info] [api.cc:printProfilingData:204] Link details: total send bytes 372873480, send actions 7
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution compare completed, input processing took 2.346e-06s, execution took 1.075939139s, output processing took 5.885e-06s, total time 1.07594737s.
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:191] HLO profiling: total time 1.0754421120000002
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 1.030306603s, send bytes 106535280
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 1 times, duration 1.3958e-05s, send bytes 0
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 2 times, duration 5.15e-06s, send bytes 0
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 4 times, duration 0.003401808s, send bytes 0
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - pphlo.shift_left, executed 1 times, duration 0.041714593s, send bytes 0
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:191] HAL profiling: total time 1.048154015
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - _lshift, executed 1 times, duration 0.017854782s, send bytes 0
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 1.030299233s, send bytes 106535280
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:191] MPC profiling: total time 1.0410631559999999
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.02995713s, send bytes 0
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - b2a, executed 2 times, duration 0.993255314s, send bytes 106535280
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - broadcast, executed 1 times, duration 5.295e-06s, send bytes 0
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:194] - lshift_b, executed 1 times, duration 0.017845417s, send bytes 0
+2024-09-25 21:45:43.989 [info] [api.cc:printProfilingData:204] Link details: total send bytes 106535280, send actions 2
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution compare completed, input processing took 3.085e-06s, execution took 1.106747595s, output processing took 2.291e-06s, total time 1.106752971s.
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:191] HLO profiling: total time 1.106195751
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 1.064608186s, send bytes 106535280
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 1 times, duration 1.4593e-05s, send bytes 0
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 2 times, duration 5.11e-06s, send bytes 0
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 4 times, duration 8.702e-06s, send bytes 0
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - pphlo.shift_left, executed 1 times, duration 0.04155916s, send bytes 0
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:191] HAL profiling: total time 1.077290887
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - _lshift, executed 1 times, duration 0.012692544s, send bytes 0
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 1.064598343s, send bytes 106535280
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:191] MPC profiling: total time 1.070569588
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.014897385s, send bytes 0
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - b2a, executed 2 times, duration 1.042985485s, send bytes 106535280
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - broadcast, executed 1 times, duration 5.557e-06s, send bytes 0
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:194] - lshift_b, executed 1 times, duration 0.012681161s, send bytes 0
+2024-09-25 21:45:44.019 [info] [api.cc:printProfilingData:204] Link details: total send bytes 106535280, send actions 2
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 2.698e-06s, execution took 0.351046157s, output processing took 1.797e-06s, total time 0.351050652s.
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.350084707
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.007256015s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.5914e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 1.4302e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.7675e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 1.1955e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 3.6254e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.342692173s, send bytes 63921168
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.0913e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.9506e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.34995594599999996
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.6956e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.007239598s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 3.2246e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.342667146s, send bytes 63921168
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.349900641
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.00721028s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.1432e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.4471e-05s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 4.005e-06s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 6.779e-06s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 3.051e-06s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.342635242s, send bytes 63921168
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 2.994e-06s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 5.53e-06s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 6.857e-06s, send bytes 0
+2024-09-25 21:45:44.383 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 4.029e-06s, execution took 0.366481919s, output processing took 9.46e-07s, total time 0.366486894s.
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.36581805
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.004939809s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.9675e-05s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 6.58e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.4006e-05s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 1.1241e-05s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 2.6904e-05s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.360768964s, send bytes 63921168
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 6.32e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.4551e-05s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.365705614
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.2179e-05s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.004924565s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 2.4144e-05s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.360744726s, send bytes 63921168
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.365660714
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.004902268s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 8.612e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.4581e-05s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 3.928e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 5.14e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 2.178e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.360714476s, send bytes 63921168
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.707e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 4.098e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 3.726e-06s, send bytes 0
+2024-09-25 21:45:44.384 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 1.561e-06s, execution took 0.344597102s, output processing took 6.087e-06s, total time 0.34460475s.
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.343738116
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.007382146s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 1.8551e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 6.388e-06s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.259e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 1.9214e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 2.107e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.336241068s, send bytes 63921168
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 2.5139e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.195e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.343604523
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.0338e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.007359956s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 1.8593e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.336215636s, send bytes 63921168
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.343562099
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.007328527s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 6.867e-06s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 9.261e-06s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 2.825e-06s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 4.389e-06s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 1.524e-06s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.336188005s, send bytes 63921168
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.77e-06s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 3.524e-06s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 1.5407e-05s, send bytes 0
+2024-09-25 21:45:44.730 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 1.521e-06s, execution took 0.348051953s, output processing took 9.69e-07s, total time 0.348054443s.
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.347506308
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.007218531s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 4.1051e-05s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 4.278e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 9.063e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 0.002752013s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 1.7748e-05s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.337434966s, send bytes 63921168
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.0217e-05s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.8441e-05s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.344634451
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.7168e-05s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.007198502s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 1.6169e-05s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.337402612s, send bytes 63921168
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.344580034
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.007170827s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 6.532e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 2.0847e-05s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 2.878e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 4.231e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 1.363e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.337362382s, send bytes 63921168
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.922e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 3.045e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 6.007e-06s, send bytes 0
+2024-09-25 21:45:44.734 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 2.144e-06s, execution took 0.354521776s, output processing took 2.728e-06s, total time 0.354526648s.
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.353616845
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.007863198s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 1.915e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 7.252e-06s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.3703e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 1.4925e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 2.3329e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.34563686s, send bytes 63921168
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 2.6334e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.2094e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.35348742
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.0439e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.007843865s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 2.077e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.345612346s, send bytes 63921168
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.35344345699999996
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.007811373s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 7.53e-06s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.0343e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 3.413e-06s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 4.7e-06s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 1.47e-06s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.345582452s, send bytes 63921168
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.988e-06s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 3.714e-06s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 1.6474e-05s, send bytes 0
+2024-09-25 21:45:45.087 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 3.36e-06s, execution took 0.355042452s, output processing took 1.123e-06s, total time 0.355046935s.
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.35410908599999996
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.005974457s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.5745e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 1.2296e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.9915e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 0.002971218s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 3.519e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.345036725s, send bytes 63921168
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.2952e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 2.0588e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.35101990600000005
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.7674e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.005960273s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 3.1087e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.345010872s, send bytes 63921168
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.350974285
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.005936478s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.2099e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.4626e-05s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 4.725e-06s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 7.443e-06s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 2.751e-06s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.344980088s, send bytes 63921168
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 2.89e-06s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 6.017e-06s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 7.168e-06s, send bytes 0
+2024-09-25 21:45:45.091 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 2.181e-06s, execution took 0.349848779s, output processing took 1.421e-06s, total time 0.349852381s.
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.349221511
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.004788837s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.1716e-05s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 7.042e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.303e-05s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 9.852e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 2.1793e-05s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.344338353s, send bytes 63921168
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 8.993e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.1895e-05s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.349118265
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.0277e-05s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.004776463s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 1.8725e-05s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.3443128s, send bytes 63921168
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.34907656600000003
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.004754763s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 6.787e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.1745e-05s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 2.973e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 4.415e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 1.665e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.344283609s, send bytes 63921168
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.619e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 3.342e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 5.648e-06s, send bytes 0
+2024-09-25 21:45:45.439 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 2.847e-06s, execution took 0.354662272s, output processing took 2.339e-06s, total time 0.354667458s.
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.353969536
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.005998413s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 3.1624e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 6.986e-06s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 1.4815e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 0.004249956s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 2.4819e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.343612622s, send bytes 63921168
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.8307e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 1.1994e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.34959555
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.0194e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.005980622s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 2.2054e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.34358268s, send bytes 63921168
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.349552391
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.005958582s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 7.555e-06s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.6498e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 3.266e-06s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 5.303e-06s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 2.008e-06s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.343543582s, send bytes 63921168
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 1.713e-06s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 3.298e-06s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 1.0586e-05s, send bytes 0
+2024-09-25 21:45:45.448 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:45.795 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 5.138e-06s, execution took 0.354146562s, output processing took 1.21e-06s, total time 0.35415291s.
+2024-09-25 21:45:45.795 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.352855831
+2024-09-25 21:45:45.795 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.010194434s, send bytes 0
+2024-09-25 21:45:45.795 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 2.9331e-05s, send bytes 0
+2024-09-25 21:45:45.795 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 1.8641e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 3.0491e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 2.1512e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 4.9491e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.342479594s, send bytes 63921168
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 9.464e-06s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 2.2873e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.35267002
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 1.8661e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.010167081s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 4.4342e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.342439936s, send bytes 63921168
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.352588122
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.010117182s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.204e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 1.7236e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 6.871e-06s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 1.3971e-05s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 3.075e-06s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.342400828s, send bytes 63921168
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 3.669e-06s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 7.291e-06s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 5.959e-06s, send bytes 0
+2024-09-25 21:45:45.796 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:45.800 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.133e-06s, execution took 0.002979643s, output processing took 7.94e-07s, total time 0.00298257s.
+2024-09-25 21:45:45.800 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.002547849
+2024-09-25 21:45:45.800 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.002547849s, send bytes 0
+2024-09-25 21:45:45.800 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.002542318
+2024-09-25 21:45:45.800 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 0.002542318s, send bytes 0
+2024-09-25 21:45:45.800 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.002534257
+2024-09-25 21:45:45.800 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.002534257s, send bytes 0
+2024-09-25 21:45:45.800 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution poly completed, input processing took 3.991e-06s, execution took 0.354918927s, output processing took 1.065e-06s, total time 0.354923983s.
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.35371199600000003
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 3 times, duration 0.007420853s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.broadcast, executed 3 times, duration 6.1701e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.constant, executed 2 times, duration 1.9127e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.dynamic-slice, executed 1 times, duration 3.0127e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 14 times, duration 0.003069715s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 5.3982e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.multiply, executed 3 times, duration 0.343022228s, send bytes 63921168
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.reshape, executed 1 times, duration 1.0863e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - pphlo.select, executed 1 times, duration 2.34e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.350448136
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - _mux, executed 1 times, duration 2.0393e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - i_add, executed 3 times, duration 0.007400362s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 4.658e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - i_mul, executed 3 times, duration 0.342980801s, send bytes 63921168
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.350387527
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - add_aa, executed 2 times, duration 0.007369652s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - add_pp, executed 6 times, duration 1.3773e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - broadcast, executed 3 times, duration 3.1462e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - extract_slice, executed 1 times, duration 6.466e-06s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 1.2022e-05s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - msb_p, executed 1 times, duration 3.299e-06s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - mul_aa, executed 3 times, duration 0.342932249s, send bytes 63921168
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - mul_pp, executed 1 times, duration 4.731e-06s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - not_p, executed 2 times, duration 7.346e-06s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:194] - reshape, executed 1 times, duration 6.527e-06s, send bytes 0
+2024-09-25 21:45:45.807 [info] [api.cc:printProfilingData:204] Link details: total send bytes 63921168, send actions 3
+2024-09-25 21:45:45.811 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 1.738e-06s, execution took 0.002365352s, output processing took 8.48e-07s, total time 0.002367938s.
+2024-09-25 21:45:45.811 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.001957173
+2024-09-25 21:45:45.811 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.001957173s, send bytes 0
+2024-09-25 21:45:45.811 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.001952708
+2024-09-25 21:45:45.811 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 0.001952708s, send bytes 0
+2024-09-25 21:45:45.811 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.001946719
+2024-09-25 21:45:45.811 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.001946719s, send bytes 0
+2024-09-25 21:45:45.811 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:45:45.823 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.41e-06s, execution took 0.003749434s, output processing took 1.19e-06s, total time 0.003753034s.
+2024-09-25 21:45:45.823 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.003290961
+2024-09-25 21:45:45.823 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.003290961s, send bytes 0
+2024-09-25 21:45:45.823 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.003285281
+2024-09-25 21:45:45.823 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 0.003285281s, send bytes 0
+2024-09-25 21:45:45.823 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.003274092
+2024-09-25 21:45:45.823 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.003274092s, send bytes 0
+2024-09-25 21:45:45.823 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:45:45.824 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 3.2e-06s, execution took 0.004690849s, output processing took 5.88e-07s, total time 0.004694637s.
+2024-09-25 21:45:45.824 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.004254394
+2024-09-25 21:45:45.824 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.004254394s, send bytes 0
+2024-09-25 21:45:45.824 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.004248718
+2024-09-25 21:45:45.824 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 0.004248718s, send bytes 0
+2024-09-25 21:45:45.824 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.004239752
+2024-09-25 21:45:45.824 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004239752s, send bytes 0
+2024-09-25 21:45:45.824 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 2.471e-06s, execution took 0.003971452s, output processing took 1.486e-06s, total time 0.003975409s.
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.003472393
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.003472393s, send bytes 0
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.003463052
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 0.003463052s, send bytes 0
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.00345135
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.00345135s, send bytes 0
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 3.602e-06s, execution took 0.004579604s, output processing took 7.06e-07s, total time 0.004583912s.
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.004117442
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.004117442s, send bytes 0
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.004112912
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 0.004112912s, send bytes 0
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.004104924
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004104924s, send bytes 0
+2024-09-25 21:45:45.836 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:45:45.850 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 4.071e-06s, execution took 0.004533953s, output processing took 1.946e-06s, total time 0.00453997s.
+2024-09-25 21:45:45.850 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.003748497
+2024-09-25 21:45:45.850 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.003748497s, send bytes 0
+2024-09-25 21:45:45.850 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.003737431
+2024-09-25 21:45:45.850 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 0.003737431s, send bytes 0
+2024-09-25 21:45:45.850 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.003721475
+2024-09-25 21:45:45.850 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.003721475s, send bytes 0
+2024-09-25 21:45:45.850 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:45:45.851 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution im completed, input processing took 3.388e-06s, execution took 0.005604594s, output processing took 1.381e-06s, total time 0.005609363s.
+2024-09-25 21:45:45.851 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.004901327
+2024-09-25 21:45:45.851 [info] [api.cc:printProfilingData:194] - pphlo.add, executed 1 times, duration 0.004901327s, send bytes 0
+2024-09-25 21:45:45.851 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.004892973
+2024-09-25 21:45:45.851 [info] [api.cc:printProfilingData:194] - i_add, executed 1 times, duration 0.004892973s, send bytes 0
+2024-09-25 21:45:45.851 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.004879889
+2024-09-25 21:45:45.851 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.004879889s, send bytes 0
+2024-09-25 21:45:45.851 [info] [api.cc:printProfilingData:204] Link details: total send bytes 0, send actions 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution judge completed, input processing took 3.317e-06s, execution took 1.031119384s, output processing took 2.354e-06s, total time 1.031125055s.
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:191] HLO profiling: total time 1.03050376
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 1 times, duration 9.77e-07s, send bytes 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 1.030467281s, send bytes 74574696
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - pphlo.not, executed 1 times, duration 3.5502e-05s, send bytes 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:191] HAL profiling: total time 1.030487129
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 1.030456324s, send bytes 74574696
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - logical_not, executed 1 times, duration 3.0805e-05s, send bytes 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:191] MPC profiling: total time 1.0304218840000001
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.003266313s, send bytes 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 3.811e-06s, send bytes 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 1.7131e-05s, send bytes 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 1.025084868s, send bytes 74574696
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.002043196s, send bytes 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:194] - xor_bp, executed 1 times, duration 6.565e-06s, send bytes 0
+2024-09-25 21:45:46.945 [info] [api.cc:printProfilingData:204] Link details: total send bytes 74574696, send actions 7
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution judge completed, input processing took 2.069e-06s, execution took 1.032595246s, output processing took 1.309e-06s, total time 1.032598624s.
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:191] HLO profiling: total time 1.0319999340000001
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 1 times, duration 0.004367242s, send bytes 0
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - pphlo.less, executed 1 times, duration 1.024816486s, send bytes 74574696
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - pphlo.not, executed 1 times, duration 0.002816206s, send bytes 0
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:191] HAL profiling: total time 1.0276224280000001
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - i_less, executed 1 times, duration 1.024809188s, send bytes 74574696
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - logical_not, executed 1 times, duration 0.00281324s, send bytes 0
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:191] MPC profiling: total time 1.027553505
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.003115634s, send bytes 0
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 0.002873052s, send bytes 0
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - make_p, executed 2 times, duration 1.452e-05s, send bytes 0
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - msb_a2b, executed 1 times, duration 1.008467595s, send bytes 74574696
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.01028585s, send bytes 0
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:194] - xor_bp, executed 1 times, duration 0.002796854s, send bytes 0
+2024-09-25 21:45:46.953 [info] [api.cc:printProfilingData:204] Link details: total send bytes 74574696, send actions 7
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution sub completed, input processing took 3.107e-06s, execution took 0.089111269s, output processing took 1.695e-06s, total time 0.089116071s.
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.08862822
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 5.654e-06s, send bytes 0
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 1 times, duration 8.43e-07s, send bytes 0
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - pphlo.subtract, executed 1 times, duration 0.088621723s, send bytes 10653528
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.088616173
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - i_sub, executed 1 times, duration 0.088616173s, send bytes 10653528
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.088570853
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.00257488s, send bytes 0
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 7.335e-06s, send bytes 0
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - b2a, executed 1 times, duration 0.083452171s, send bytes 10653528
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 7.058e-06s, send bytes 0
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.002529409s, send bytes 0
+2024-09-25 21:45:47.054 [info] [api.cc:printProfilingData:204] Link details: total send bytes 10653528, send actions 1
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:158] [Profiling] SPU execution sub completed, input processing took 1.706e-06s, execution took 0.094812112s, output processing took 1.107e-06s, total time 0.094814925s.
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:191] HLO profiling: total time 0.09435515600000001
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - pphlo.convert, executed 1 times, duration 4.593e-06s, send bytes 0
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - pphlo.free, executed 1 times, duration 6.97e-07s, send bytes 0
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - pphlo.subtract, executed 1 times, duration 0.094349866s, send bytes 10653528
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:191] HAL profiling: total time 0.094344217
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - i_sub, executed 1 times, duration 0.094344217s, send bytes 10653528
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:191] MPC profiling: total time 0.09151846699999999
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - add_aa, executed 1 times, duration 0.002548784s, send bytes 0
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - add_ap, executed 1 times, duration 0.002768241s, send bytes 0
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - b2a, executed 1 times, duration 0.076340943s, send bytes 10653528
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - make_p, executed 1 times, duration 8.754e-06s, send bytes 0
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:194] - not_a, executed 1 times, duration 0.009851745s, send bytes 0
+2024-09-25 21:45:47.060 [info] [api.cc:printProfilingData:204] Link details: total send bytes 10653528, send actions 1

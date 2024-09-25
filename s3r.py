@@ -140,10 +140,10 @@ sendershare = sendershare.astype(int)
 receivershare = ones_vector - receivershare
 #print(receivershare)
 
-with open('receivershare', 'w') as file:
+with open('../../bazel-bin/examples/pfrpsi/receivershare', 'w') as file:
     for value in receivershare:
         file.write(f"{value}\n")
 
-with open('sendershare', 'w') as file:
+with open('../../bazel-bin/examples/pfrpsi/sendershare', 'w') as file:
     for value in sendershare:
         file.write(f"{value}\n")
