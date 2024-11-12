@@ -24,8 +24,6 @@
 #include "yacl/link/link.h"
 #include "yacl/utils/parallel.h"
 
-
-
 namespace yc = yacl::crypto;
 
 class EcdhPsi {
@@ -41,43 +39,43 @@ class EcdhPsi {
   // Mask input strings with secret key, and outputs the EcPoint results
   void MaskStrings(absl::Span<std::string> in, absl::Span<yc::EcPoint> out);
 
-
   void MaskEcPoints(absl::Span<yc::EcPoint> in, absl::Span<yc::EcPoint> out);
 
-  void MaskEcPointswithScalar(absl::Span<yc::EcPoint> in,absl::Span<yc::EcPoint> out,yc::MPInt b); 
+  void MaskEcPointswithScalar(absl::Span<yc::EcPoint> in,
+                              absl::Span<yc::EcPoint> out, yc::MPInt b);
 
-  void MaskEcPointsD(absl::Span<yc::EcPoint> in,absl::Span<std::string> out);
+  void MaskEcPointsD(absl::Span<yc::EcPoint> in, absl::Span<std::string> out);
 
-  void StringEcPoints(absl::Span<yc::EcPoint> in,absl::Span<std::string> out); 
+  void StringEcPoints(absl::Span<yc::EcPoint> in, absl::Span<std::string> out);
 
-  void SubEcPoints(absl::Span<yc::EcPoint> in,absl::Span<yc::EcPoint> out,yc::EcPoint b);
+  void SubEcPoints(absl::Span<yc::EcPoint> in, absl::Span<yc::EcPoint> out,
+                   yc::EcPoint b);
 
-  void AddEcPoints(absl::Span<yc::EcPoint> in,absl::Span<yc::EcPoint> out,yc::EcPoint b);
+  void AddEcPoints(absl::Span<yc::EcPoint> in, absl::Span<yc::EcPoint> out,
+                   yc::EcPoint b);
 
-  void PointstoBuffer(absl::Span<yc::EcPoint> in, absl::Span<std::uint8_t> buffer);
+  void PointstoBuffer(absl::Span<yc::EcPoint> in,
+                      absl::Span<std::uint8_t> buffer);
 
-  void BuffertoPoints(absl::Span<yc::EcPoint> in, absl::Span<std::uint8_t> buffer);
+  void BuffertoPoints(absl::Span<yc::EcPoint> in,
+                      absl::Span<std::uint8_t> buffer);
 
-  void BuffertoStrings(absl::Span<std::uint8_t> in, absl::Span<std::string> buffer);
+  void BuffertoStrings(absl::Span<std::uint8_t> in,
+                       absl::Span<std::string> buffer);
 
-  void MaskUint128s_Sender(absl::Span<uint128_t> in,
-                          absl::Span<int> shares,
-                          absl::Span<yc::EcPoint> out);
+  void MaskUint128s_Sender(absl::Span<uint128_t> in, absl::Span<int> shares,
+                           absl::Span<yc::EcPoint> out);
 
-  void MaskUint128s_Recv(absl::Span<uint128_t> in,
-                          absl::Span<int> shares,
-                          absl::Span<yc::EcPoint> out,
-                          size_t cuckoosize); 
-
+  void MaskUint128s_Recv(absl::Span<uint128_t> in, absl::Span<int> shares,
+                         absl::Span<yc::EcPoint> out, size_t cuckoosize);
 
   std::shared_ptr<yc::EcGroup> ec_;  // ec group
-  yc::MPInt sk_; 
+  yc::MPInt sk_;
 };
 
-std::vector<int32_t> EcdhPsiRecv(const std::shared_ptr<yacl::link::Context>& ctx,
-                 std::vector<uint128_t>& x,size_t size_y);
-
+std::vector<int32_t> EcdhPsiRecv(
+    const std::shared_ptr<yacl::link::Context>& ctx, std::vector<uint128_t>& x,
+    size_t size_y);
 
 void EcdhPsiSend(const std::shared_ptr<yacl::link::Context>& ctx,
-                 std::vector<uint128_t>& y,size_t size_x,size_t cuckoosize);
-
+                 std::vector<uint128_t>& y, size_t size_x, size_t cuckoosize);

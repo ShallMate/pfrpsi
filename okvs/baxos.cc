@@ -20,9 +20,8 @@
 #include <unordered_set>
 #include <vector>
 
-#include "spdlog/spdlog.h"
-
 #include "examples/pfrpsi/okvs/simple_index.h"
+#include "spdlog/spdlog.h"
 
 namespace okvs {
 

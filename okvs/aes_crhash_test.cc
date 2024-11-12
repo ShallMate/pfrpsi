@@ -17,8 +17,8 @@
 #include <vector>
 
 #include "gtest/gtest.h"
-#include "yacl/crypto/tools/prg.h"
 
+#include "yacl/crypto/tools/prg.h"
 
 namespace okvs {
 

@@ -20,9 +20,9 @@
 #include <vector>
 
 #include "absl/types/span.h"
-#include "yacl/crypto/tools/prg.h"
-
 #include "examples/pfrpsi/okvs/galois128.h"
+
+#include "yacl/crypto/tools/prg.h"
 
 namespace okvs {
 

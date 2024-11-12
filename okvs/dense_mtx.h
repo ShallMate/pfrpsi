@@ -17,9 +17,9 @@
 #include <utility>
 #include <vector>
 
-#include "yacl/base/exception.h"
-
 #include "examples/pfrpsi/okvs/galois128.h"
+
+#include "yacl/base/exception.h"
 
 namespace okvs {
 

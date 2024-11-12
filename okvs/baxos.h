@@ -19,7 +19,6 @@
 #include <ostream>
 
 #include "absl/types/span.h"
-
 #include "examples/pfrpsi/okvs/dense_mtx.h"
 #include "examples/pfrpsi/okvs/galois128.h"
 #include "examples/pfrpsi/okvs/paxos.h"

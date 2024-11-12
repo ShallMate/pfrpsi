@@ -12,18 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "examples/pfrpsi/okvs/baxos.h"
-
-#include <vector>
 #include <iostream>
+#include <vector>
+
+#include "examples/pfrpsi/okvs/baxos.h"
 #include "spdlog/spdlog.h"
+
 #include "yacl/crypto/rand/rand.h"
 #include "yacl/crypto/tools/prg.h"
 
 namespace okvs {
 
 void RunBaxosTest(size_t items_num) {
-  size_t bin_size = items_num/16;
+  size_t bin_size = items_num / 16;
   size_t weight = 3;
   // statistical security parameter
   size_t ssp = 40;
@@ -50,25 +51,30 @@ void RunBaxosTest(size_t items_num) {
   prng.Fill(absl::MakeSpan(items.data(), items.size()));
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> duration = end - start;
-  std::cout << "Time for prng.Fill(items): " << duration.count() << " seconds" << std::endl;
+  std::cout << "Time for prng.Fill(items): " << duration.count() << " seconds"
+            << std::endl;
 
   start = std::chrono::high_resolution_clock::now();
   prng.Fill(absl::MakeSpan(values.data(), values.size()));
   end = std::chrono::high_resolution_clock::now();
   duration = end - start;
-  std::cout << "Time for prng.Fill(values): " << duration.count() << " seconds" << std::endl;
+  std::cout << "Time for prng.Fill(values): " << duration.count() << " seconds"
+            << std::endl;
 
   start = std::chrono::high_resolution_clock::now();
   baxos.Solve(absl::MakeSpan(items), absl::MakeSpan(values), absl::MakeSpan(p));
   end = std::chrono::high_resolution_clock::now();
   duration = end - start;
-  std::cout << "Time for baxos.Solve: " << duration.count() << " seconds" << std::endl;
+  std::cout << "Time for baxos.Solve: " << duration.count() << " seconds"
+            << std::endl;
 
   start = std::chrono::high_resolution_clock::now();
-  baxos.Decode(absl::MakeSpan(items), absl::MakeSpan(values2), absl::MakeSpan(p));
+  baxos.Decode(absl::MakeSpan(items), absl::MakeSpan(values2),
+               absl::MakeSpan(p));
   end = std::chrono::high_resolution_clock::now();
   duration = end - start;
-  std::cout << "Time for baxos.Decode: " << duration.count() << " seconds" << std::endl;
+  std::cout << "Time for baxos.Decode: " << duration.count() << " seconds"
+            << std::endl;
 
   if (std::memcmp(values2.data(), values.data(),
                   values.size() * sizeof(uint128_t)) != 0) {
@@ -83,11 +89,10 @@ void RunBaxosTest(size_t items_num) {
   std::cout << "Test passed for items_num: " << items_num << std::endl;
 }
 
-} 
+}  // namespace okvs
 
 int main() {
-
   okvs::RunBaxosTest(1048576);
-  
+
   return 0;
 }

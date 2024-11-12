@@ -20,6 +20,7 @@
 #include "gtest/gtest.h"
 #include "openssl/modes.h"
 #include "spdlog/spdlog.h"
+
 #include "yacl/crypto/rand/rand.h"
 #include "yacl/crypto/tools/prg.h"
 

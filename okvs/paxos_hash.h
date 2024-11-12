@@ -19,12 +19,12 @@
 #include <vector>
 
 #include "absl/types/span.h"
-#include "libdivide.h"
-#include "yacl/math/gadget.h"
-#include "yacl/utils/platform_utils.h"
-
 #include "examples/pfrpsi/okvs/aes_crhash.h"
 #include "examples/pfrpsi/okvs/galois128.h"
+#include "libdivide.h"
+
+#include "yacl/math/gadget.h"
+#include "yacl/utils/platform_utils.h"
 
 namespace okvs {
 

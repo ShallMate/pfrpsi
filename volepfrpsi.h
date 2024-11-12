@@ -14,6 +14,7 @@
 
 #pragma once
 
+#include <fstream>
 #include <vector>
 
 #include "examples/pfrpsi/okvs/baxos.h"
@@ -21,22 +22,19 @@
 #include "yacl/base/int128.h"
 #include "yacl/kernel/algorithms/silent_vole.h"
 #include "yacl/utils/parallel.h"
-#include <fstream>
 
 using namespace yacl::crypto;
 using namespace std;
 
-namespace VOLEPFRPSI{
+namespace VOLEPFRPSI {
 
-std::vector<int32_t> PRFPSIRecv(
-  const std::shared_ptr<yacl::link::Context>& ctx,
-  std::vector<uint128_t>& elem_hashes, okvs::Baxos baxos,
-  std::vector<uint128_t>& A,
-  std::vector<uint128_t>& C1); 
+std::vector<int32_t> PRFPSIRecv(const std::shared_ptr<yacl::link::Context>& ctx,
+                                std::vector<uint128_t>& elem_hashes,
+                                okvs::Baxos baxos, std::vector<uint128_t>& A,
+                                std::vector<uint128_t>& C1);
 
 void PRFPSISend(const std::shared_ptr<yacl::link::Context>& ctx,
-                 std::vector<uint128_t>& elem_hashes, okvs::Baxos baxos,
-                 std::vector<uint128_t>& B,
-                 std::vector<uint128_t>& C2);
+                std::vector<uint128_t>& elem_hashes, okvs::Baxos baxos,
+                std::vector<uint128_t>& B, std::vector<uint128_t>& C2);
 
-}; 
+};  // namespace VOLEPFRPSI

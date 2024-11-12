@@ -14,68 +14,68 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <fstream>
+#include <future>
 #include <iostream>
 #include <vector>
-#include <future>
 
 #include "examples/pfrpsi/okvs/baxos.h"
 
 #include "yacl/base/int128.h"
 #include "yacl/kernel/algorithms/silent_vole.h"
 #include "yacl/utils/parallel.h"
-#include <fstream>
 
-namespace VOLEPFRPSI{
+namespace VOLEPFRPSI {
 
 using namespace yacl::crypto;
 using namespace std;
 
 inline std::vector<int32_t> GetIntersectionIdx(
-    const std::vector<uint128_t> &x, const std::vector<uint128_t> &y) {
-
+    const std::vector<uint128_t>& x, const std::vector<uint128_t>& y) {
   std::set<uint128_t> set(x.begin(), x.end());
   std::vector<int32_t> ret(y.size(), -1);  // 初始化为 -1
 
   yacl::parallel_for(0, y.size(), [&](size_t start, size_t end) {
     for (size_t i = start; i < end; ++i) {
       if (set.count(y[i]) != 0) {
-        ret[i] = i; 
+        ret[i] = i;
       }
     }
   });
 
   // 清除所有值为 -1 的元素
   ret.erase(std::remove(ret.begin(), ret.end(), -1), ret.end());
-  
+
   return ret;
 }
 
-std::vector<int32_t> PRFPSIRecv(
-  const std::shared_ptr<yacl::link::Context>& ctx,
-  std::vector<uint128_t>& elem_hashes, okvs::Baxos baxos,
-  std::vector<uint128_t>& A,
-  std::vector<uint128_t>& C1) {
-  
+std::vector<int32_t> PRFPSIRecv(const std::shared_ptr<yacl::link::Context>& ctx,
+                                std::vector<uint128_t>& elem_hashes,
+                                okvs::Baxos baxos, std::vector<uint128_t>& A,
+                                std::vector<uint128_t>& C1) {
   std::ifstream file("receivershare");  // 打开文件
-  if (!file.is_open()) {           // 检查文件是否成功打开
-      throw std::runtime_error("cannot open receivershare file");
+  if (!file.is_open()) {                // 检查文件是否成功打开
+    throw std::runtime_error("cannot open receivershare file");
   }
 
   std::vector<int> receivershares;  // 存储整数的向量
-  std::copy_n(std::istream_iterator<int>(file), elem_hashes.size(), std::back_inserter(receivershares));
+  std::copy_n(std::istream_iterator<int>(file), elem_hashes.size(),
+              std::back_inserter(receivershares));
   file.close();  // 关闭文件
-  //std::cout << "文件中有 " << receivershares.size() << " 个元素。" << std::endl;
+  // std::cout << "文件中有 " << receivershares.size() << " 个元素。" <<
+  // std::endl;
   std::vector<uint128_t> E(elem_hashes.size());
 
   yacl::parallel_for(0, elem_hashes.size(), [&](int64_t begin, int64_t end) {
     for (int64_t idx = begin; idx < end; ++idx) {
-      E[idx] = C1[idx] ^ yacl::crypto::Blake3_128(std::to_string(receivershares[idx]));
+      E[idx] = C1[idx] ^
+               yacl::crypto::Blake3_128(std::to_string(receivershares[idx]));
     }
   });
   ctx->SendAsync(
-    ctx->NextRank(),
-    yacl::ByteContainerView(E.data(), E.size() * sizeof(uint128_t)),
-    "Send E");
+      ctx->NextRank(),
+      yacl::ByteContainerView(E.data(), E.size() * sizeof(uint128_t)),
+      "Send E");
 
   uint128_t okvssize = baxos.size();
 
@@ -95,13 +95,13 @@ std::vector<int32_t> PRFPSIRecv(
   std::vector<uint128_t> p(okvssize);
   baxos.Solve(absl::MakeSpan(elem_hashes), absl::MakeSpan(elem_hashes),
               absl::MakeSpan(p), nullptr, 8);
+  volereceiver.get();
   std::vector<uint128_t> aprime(okvssize);
   yacl::parallel_for(0, aprime.size(), [&](int64_t begin, int64_t end) {
     for (int64_t idx = begin; idx < end; ++idx) {
       aprime[idx] = a[idx] ^ p[idx];
     }
   });
-  volereceiver.get();
   ctx->SendAsync(
       ctx->NextRank(),
       yacl::ByteContainerView(aprime.data(), aprime.size() * sizeof(uint128_t)),
@@ -110,7 +110,7 @@ std::vector<int32_t> PRFPSIRecv(
   baxos.Decode(absl::MakeSpan(elem_hashes), absl::MakeSpan(receivermasks),
                absl::MakeSpan(c), 8);
 
-    yacl::parallel_for(0, elem_hashes.size(), [&](int64_t begin, int64_t end) {
+  yacl::parallel_for(0, elem_hashes.size(), [&](int64_t begin, int64_t end) {
     for (int64_t idx = begin; idx < end; ++idx) {
       receivermasks[idx] = receivermasks[idx] ^ A[idx];
     }
@@ -124,30 +124,32 @@ std::vector<int32_t> PRFPSIRecv(
 }
 
 void PRFPSISend(const std::shared_ptr<yacl::link::Context>& ctx,
-                 std::vector<uint128_t>& elem_hashes, okvs::Baxos baxos,
-                 std::vector<uint128_t>& B,
-                 std::vector<uint128_t>& C2) {
-
+                std::vector<uint128_t>& elem_hashes, okvs::Baxos baxos,
+                std::vector<uint128_t>& B, std::vector<uint128_t>& C2) {
   std::ifstream file("sendershare");  // 打开文件
-  if (!file.is_open()) {           // 检查文件是否成功打开
-      throw std::runtime_error("cannot open sendershare file");
+  if (!file.is_open()) {              // 检查文件是否成功打开
+    throw std::runtime_error("cannot open sendershare file");
   }
 
   std::vector<int> sendershares;  // 存储整数的向量
-  std::copy_n(std::istream_iterator<int>(file), elem_hashes.size(), std::back_inserter(sendershares));
+  std::copy_n(std::istream_iterator<int>(file), elem_hashes.size(),
+              std::back_inserter(sendershares));
   file.close();  // 关闭文件
-  //std::cout << "文件中有 " << sendershares.size() << " 个元素。" << std::endl;
+  // std::cout << "文件中有 " << sendershares.size() << " 个元素。" <<
+  // std::endl;
   std::vector<uint128_t> E(elem_hashes.size());
   std::vector<uint128_t> A(elem_hashes.size());
   auto ebuf = ctx->Recv(ctx->PrevRank(), "Receive E");
   YACL_ENFORCE(ebuf.size() == int64_t(elem_hashes.size() * sizeof(uint128_t)));
   std::memcpy(E.data(), ebuf.data(), ebuf.size());
-    yacl::parallel_for(0, elem_hashes.size(), [&](int64_t begin, int64_t end) {
+  yacl::parallel_for(0, elem_hashes.size(), [&](int64_t begin, int64_t end) {
     for (int64_t idx = begin; idx < end; ++idx) {
       okvs::Galois128 b_gf128(B[idx]);
       okvs::Galois128 inv = b_gf128.Inv();
-      okvs::Galois128 res(E[idx]^yacl::crypto::Blake3_128(std::to_string(sendershares[idx]))^C2[idx]);
-      A[idx] = (res*inv).get<uint128_t>(0);
+      okvs::Galois128 res(
+          E[idx] ^ yacl::crypto::Blake3_128(std::to_string(sendershares[idx])) ^
+          C2[idx]);
+      A[idx] = (res * inv).get<uint128_t>(0);
     }
   });
   size_t okvssize =
@@ -177,8 +179,9 @@ void PRFPSISend(const std::shared_ptr<yacl::link::Context>& ctx,
                absl::MakeSpan(k), 8);
   yacl::parallel_for(0, elem_hashes.size(), [&](int64_t begin, int64_t end) {
     for (int64_t idx = begin; idx < end; ++idx) {
-      sendermasks[idx] =
-          sendermasks[idx] ^ (delta_gf128 * elem_hashes[idx]).get<uint128_t>(0)^A[idx];
+      sendermasks[idx] = sendermasks[idx] ^
+                         (delta_gf128 * elem_hashes[idx]).get<uint128_t>(0) ^
+                         A[idx];
     }
   });
   ctx->SendAsync(
@@ -187,4 +190,4 @@ void PRFPSISend(const std::shared_ptr<yacl::link::Context>& ctx,
                               sendermasks.size() * sizeof(uint128_t)),
       "Send masks of sender");
 }
-};
+};  // namespace VOLEPFRPSI
