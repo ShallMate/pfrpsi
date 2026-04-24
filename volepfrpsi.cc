@@ -20,7 +20,6 @@
 #include <vector>
 
 #include "examples/pfrpsi/okvs/baxos.h"
-
 #include "yacl/base/int128.h"
 #include "yacl/kernel/algorithms/silent_vole.h"
 #include "yacl/utils/parallel.h"

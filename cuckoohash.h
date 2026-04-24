@@ -37,7 +37,7 @@ class CuckooHash {
     if (cuckoosize_ <= 0) {
       throw std::invalid_argument("cuckoosize must be positive");
     }
-    bins_.resize(cuckoolen_);  // 初始化值为0
+    bins_.resize(cuckoolen_);
   }
 
   void Insert(std::vector<uint128_t> inputs) {
@@ -46,7 +46,6 @@ class CuckooHash {
     }
     hash_index_.resize(cuckoolen_, 0);
     for (size_t i = 0; i < cuckoosize_; ++i) {
-      // std::cout<<i<<std::endl;
       uint8_t old_hash_id = 1;
       size_t j = 0;
       for (; j < maxiter_; ++j) {

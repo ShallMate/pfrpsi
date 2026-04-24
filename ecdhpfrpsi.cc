@@ -23,7 +23,6 @@
 #include <vector>
 
 #include "examples/pfrpsi/cuckoohash.h"
-
 #include "yacl/base/int128.h"
 #include "yacl/crypto/ecc/ec_point.h"
 #include "yacl/crypto/ecc/ecc_spi.h"

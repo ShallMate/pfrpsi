@@ -24,7 +24,6 @@
 #include "examples/pfrpsi/okvs/paxos_hash.h"
 #include "examples/pfrpsi/okvs/paxos_utils.h"
 #include "libdivide.h"
-
 #include "yacl/utils/platform_utils.h"
 
 namespace okvs {

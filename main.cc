@@ -21,7 +21,6 @@
 #include "examples/pfrpsi/ecdhpfrpsi.h"
 #include "examples/pfrpsi/okvs/baxos.h"
 #include "examples/pfrpsi/volepfrpsi.h"
-
 #include "yacl/base/int128.h"
 #include "yacl/kernel/algorithms/silent_vole.h"
 #include "yacl/link/test_util.h"
