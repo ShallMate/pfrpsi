@@ -19,19 +19,22 @@ package(default_visibility = ["//visibility:public"])
 yacl_cc_binary(
     name = "pfrpsi",
     srcs = [
-        "ecdhpfrpsi.h",
+        "cuckoohash.h",
         "ecdhpfrpsi.cc",
+        "ecdhpfrpsi.h",
+        "main.cc",
         "volepfrpsi.cc",
         "volepfrpsi.h",
-        "cuckoohash.h",
-        "main.cc"
+    ],
+    copts = [
+        "-maes",
+        "-mpclmul",
     ],
     deps = [
-         "//yacl/crypto/ecc",
-        "//yacl/kernel/algorithms:silent_vole",
         "//examples/pfrpsi/okvs:baxos",
+        "//yacl/crypto/ecc",
+        "//yacl/kernel/algorithms:silent_vole",
         "//yacl/link:test_util",
-        "//yacl/utils:platform_utils"
+        "//yacl/utils:platform_utils",
     ],
-    copts = ["-maes", "-mpclmul"],
 )
